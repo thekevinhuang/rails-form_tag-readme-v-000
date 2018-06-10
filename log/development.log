@@ -356,3 +356,26 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.5ms)
+
+
+Started GET "/" for 207.38.137.2 at 2018-06-10 20:21:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 207.38.137.2 at 2018-06-10 20:21:30 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 326ms (Views: 324.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 207.38.137.2 at 2018-06-10 20:21:37 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"hello", "description"=>"hi there"}, "authenticity_token"=>"fNw7mRFudUahqqwYYqgE798y39dLHAvvIEcFWukga85ZkI2ehQ3+YlhyR5rQ2hC+PN1RYzcqM4fds3lAHjH/Gw=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-06-10 20:21:37.054858"], ["updated_at", "2018-06-10 20:21:37.054858"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://174.138.35.103:54736/posts
+Completed 302 Found in 14ms (ActiveRecord: 3.3ms)
